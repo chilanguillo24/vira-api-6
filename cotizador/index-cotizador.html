@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ViraPack Cotizador</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <img src="../img/vira-logo.png" class="logoImg">
+        <span class="logoTexto">ViraPack</span>
+    </div>
+
+    <a href="../index.html" class="btnInicio">
+        <span class="iconHome">🏠</span>
+        Inicio
+    </a>
+
+</header>
+
+<div class="cotizador">
+
+    <h1>Cotizador de Envíos</h1>
+
+    <div class="campo">
+        <label>Código Postal</label>
+        <input id="cp" type="number" placeholder="Ej. 45100">
+    </div>
+
+    <div class="campo">
+        <label>Peso (kg)</label>
+        <input id="peso" type="number" placeholder="Ej. 5">
+    </div>
+
+    <div class="campo">
+        <label>Largo (cm)</label>
+        <input id="largo" type="number" placeholder="Ej. 30">
+    </div>
+
+    <div class="campo">
+        <label>Ancho (cm)</label>
+        <input id="ancho" type="number" placeholder="Ej. 20">
+    </div>
+
+    <div class="campo">
+        <label>Alto (cm)</label>
+        <input id="alto" type="number" placeholder="Ej. 15">
+    </div>
+
+    <!-- BOTÓN PRINCIPAL -->
+    <button id="btnCalcular">
+        Enviar Cotización por WhatsApp
+    </button>
+
+</div>
+
+<script src="js/cotizador.js"></script>
+
+</body>
+</html>

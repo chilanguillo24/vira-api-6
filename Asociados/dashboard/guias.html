@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Panel Guías</title>
+
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+<link rel="stylesheet" href="../assets/css/guias.css">
+
+<!-- LIBRERÍAS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+
+<body onload="initGuias();">
+
+<div class="sidebar">
+    <h2>Guías</h2>
+    <ul>
+        <li onclick="mostrarModulo()">Generar Guía</li>
+        <li onclick="cerrarSesion()">Cerrar sesión</li>
+    </ul>
+</div>
+
+<div class="main">
+    <h1>Generador de Guías</h1>
+    <div id="moduloGuias"></div>
+</div>
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../assets/js/supabase.js"></script>
+
+<!-- TUS SCRIPTS -->
+<script src="../assets/js/session.js"></script>
+<script src="../assets/js/guias.js"></script>
+
+</body>
+</html>

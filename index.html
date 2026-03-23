@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ViraPack | Envíos y Paquetería</title>
+
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+<div class="top-bar">
+🚚 Envíos rápidos en todo Zacatecas | Atención por WhatsApp
+</div>
+
+<header>
+<nav class="nav">
+<!-- BOTÓN MENU -->
+<div class="menu-toggle" id="menu-toggle">
+☰
+</div>
+<div class="logo">
+<img src="img/vira-logo.png" alt="ViraPack">
+<span class="logo-text">Vira<span class="verde">Pack</span></span>
+</div>
+
+<!-- MENU LATERAL -->
+<div class="sidebar" id="sidebar">
+
+<div class="sidebar-header">
+<span>Menú</span>
+<span class="close-btn" id="close-btn">✖</span>
+</div>
+
+<a href="index.html">Inicio</a>
+<a href="cotizador/index-cotizador.html">Cotizar</a>
+<a href="tel:4945135656">Llamar</a>
+<a href="https://wa.me/524945135656" target="_blank">WhatsApp</a>
+<a href="Asociados/index.html" >ASOCIADOS</a>
+
+</div>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay"></div>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+
+<h1>Envíos rápidos y seguros</h1>
+
+<p>
+Transportamos tus paquetes a todo el estado de Zacatecas 
+con eficiencia, seguridad y atención personalizada.
+</p>
+
+<div class="hero-botones">
+<a href="cotizador/index-cotizador.html" class="btn hero-btn">Cotizar envío</a>
+<a href="https://wa.me/524945135656" target="_blank" class="btn">Contactar</a>
+</div>
+
+</div>
+</section>
+
+<section class="stats">
+<div class="container stats-grid">
+
+<div class="stat">
+<h3 class="contador" data-target="5000">0</h3>
+<p>Paquetes entregados</p>
+</div>
+
+<div class="stat">
+<h3 class="contador" data-target="52">0</h3>
+<p>Municipios cubiertos</p>
+</div>
+
+<div class="stat">
+<h3 class="contador" data-target="24">0</h3>
+<p>Horas promedio</p>
+</div>
+
+</div>
+</section>
+
+<section class="section servicios">
+<div class="container">
+
+<h2>Nuestros Servicios</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="img/vira-logo.png">
+<div class="card-content">
+<h3>Logística eficiente</h3>
+<p>Optimización de rutas para entregas rápidas y seguras.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="img/fernanda.jpeg">
+<div class="card-content">
+<h3>Cobertura estatal</h3>
+<p>Llegamos a todos los municipios del estado de Zacatecas.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="img/gabriela.jpeg">
+<div class="card-content">
+<h3>Atención personalizada</h3>
+<p>Atención directa por teléfono y WhatsApp.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="proceso">
+<div class="container">
+
+<h2>¿Cómo funciona?</h2>
+
+<div class="pasos">
+
+<div class="paso">
+<div class="numero">1</div>
+<p>Cotiza tu envío</p>
+</div>
+
+<div class="paso">
+<div class="numero">2</div>
+<p>Recolectamos tu paquete</p>
+</div>
+
+<div class="paso">
+<div class="numero">3</div>
+<p>Transportamos con seguridad</p>
+</div>
+
+<div class="paso">
+<div class="numero">4</div>
+<p>Entrega en destino</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="testimonios">
+<div class="container">
+
+<h2>Opiniones de nuestros clientes</h2>
+
+<div class="reviews">
+
+<div class="review">
+<p>"Excelente servicio, mi paquete llegó rápido y sin problemas."</p>
+<h4>- Carlos M.</h4>
+</div>
+
+<div class="review">
+<p>"Muy buena atención y seguimiento durante el envío."</p>
+<h4>- Fernanda R.</h4>
+</div>
+
+<div class="review">
+<p>"La mejor paquetería local que he utilizado."</p>
+<h4>- Gabriela T.</h4>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+
+<h2>¿Listo para enviar tu paquete?</h2>
+
+<p>Cotiza tu envío en segundos o contáctanos directamente.</p>
+
+<div class="cta-botones">
+<a href="cotizador/index-cotizador.html" class="btn">Cotizar ahora</a>
+<a href="https://wa.me/524945135656" target="_blank" class="btn">WhatsApp</a>
+</div>
+
+</div>
+</section>
+
+<footer>
+<div class="footer-content">
+<p>© 2026 ViraPack | Todos los derechos reservados</p>
+</div>
+</footer>
+
+<a href="tel:4945135656" class="call-float">📞</a>
+
+<a href="https://wa.me/524945135656?text=Hola%20quiero%20cotizar%20un%20envío"
+class="whatsapp-float"
+target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+<!-- ===== LOGIN ASOCIADOS ===== -->
+<div id="loginModal" class="login-modal">
+  <div class="login-box">
+    
+    <span class="cerrar" onclick="cerrarLogin()">✖</span>
+
+    <h2>🔒 Acceso Asociados</h2>
+
+    <input type="text" id="usuario" placeholder="Usuario">
+    <input type="password" id="password" placeholder="Contraseña">
+
+    <button onclick="login()">Ingresar</button>
+
+    <p id="error"></p>
+  </div>
+</div>
+<script src="js/js.js"></script>
+
+</body>
+</html>

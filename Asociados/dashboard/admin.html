@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Admin | ViraPack</title>
+
+<link rel="stylesheet" href="../assets/css/admin.css">
+
+<!-- LIBRERÍAS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+
+<!-- ✅ JsBarcode CORRECTO -->
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js" defer></script>
+
+</head>
+
+<body onload="initAdmin();">
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>ViraPack</h2>
+
+        <button onclick="mostrarVista('dashboard')">Dashboard</button>
+        <button onclick="mostrarVista('finanzas')">Finanzas</button>
+        <button onclick="mostrarVista('corte')">Corte</button>
+        <button onclick="mostrarVista('guias')">Guías</button>
+
+        <button onclick="cerrarSesion()">Salir</button>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="contenido">
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="vista activa">
+            <h1>Resumen</h1>
+
+            <div class="stats">
+                <div class="card-stat">
+                    <h3 id="totalGuias">0</h3>
+                    <p>Guías</p>
+                </div>
+
+                <div class="card-stat">
+                    <h3 id="ingresos">$0</h3>
+                    <p>Ingresos</p>
+                </div>
+
+                <div class="card-stat">
+                    <h3 id="pendiente">$0</h3>
+                    <p>Pendiente</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINANZAS -->
+        <section id="finanzas" class="vista">
+            <h1>Finanzas</h1>
+            <div id="listaFinanzas"></div>
+        </section>
+
+        <!-- CORTE -->
+        <section id="corte" class="vista">
+            <h1>Corte de caja</h1>
+
+            <div class="stats">
+                <div class="card-stat">
+                    <h3 id="totalHoy">$0</h3>
+                    <p>Total</p>
+                </div>
+
+                <div class="card-stat">
+                    <h3 id="pagadoHoy">$0</h3>
+                    <p>Pagado</p>
+                </div>
+
+                <div class="card-stat">
+                    <h3 id="pendienteHoy">$0</h3>
+                    <p>Pendiente</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GUIAS -->
+        <section id="guias" class="vista">
+            <h1>Gestión de Guías</h1>
+
+            <input 
+                type="text" 
+                id="buscador" 
+                placeholder="Buscar guía o cliente..." 
+                oninput="buscarGuias()"
+            >
+
+            <div id="listaGuias"></div>
+        </section>
+
+    </main>
+
+</div>
+
+<!-- MODAL EDITAR -->
+<div id="modalEditar" class="modal">
+    <div class="modal-content">
+        <h2>Editar Guía</h2>
+
+        <input id="edit_nombre" placeholder="Nombre">
+        <input id="edit_tel" placeholder="Teléfono">
+        <input id="edit_destino" placeholder="Destino">
+        <input id="edit_total" placeholder="Total">
+
+        <div class="acciones-modal">
+            <button onclick="guardarEdicion()">💾 Guardar</button>
+            <button onclick="cerrarModal()">❌ Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../assets/js/supabase.js"></script>
+
+<!-- TUS SCRIPTS -->
+<script src="../assets/js/session.js" defer></script>
+<script src="../assets/js/admin.js" defer></script>
+
+</body>
+</html>

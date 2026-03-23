@@ -1,0 +1,118 @@
+/* CONTENEDOR */
+.contenedor {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* PANEL GENERAL */
+.panel {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+/* INPUTS */
+input, select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #198754;
+    box-shadow: 0 0 5px rgba(25,135,84,0.3);
+    outline: none;
+}
+
+/* TÍTULOS */
+h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0f5132;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #198754;
+    padding-bottom: 5px;
+}
+
+/* BLOQUES TIPO ETIQUETA */
+.panel h2 + .grid {
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+/* NÚMERO DE GUÍA */
+.guia {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.guia input {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #198754;
+    border-radius: 8px;
+    background: #f0f9f4;
+}
+
+/* BOTÓN */
+.btn-generar {
+    background: linear-gradient(135deg, #198754, #146c43);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-generar:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* RESULTADOS (tarifa, excedente) */
+.resultados {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    background: #f1f5f3;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+/* CANVAS (QR / BARCODE) */
+canvas {
+    display: block;
+    margin: 15px auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
